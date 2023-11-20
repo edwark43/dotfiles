@@ -1,7 +1,7 @@
 # edwark43 dotfiles:
 ![GitHub repo size](https://img.shields.io/github/repo-size/edwark43/dotfiles?style=for-the-badge&logo=hackthebox&labelColor=%23000000)
 
-<img src="https://github.com/edwark43/dotfiles/misc/assets/readme-preview.png" alt="Rice" align="center" width="100%">
+<img src="misc/assets/readme-preview.png" alt="Rice" align="center" width="100%">
 
 ## Setup:
 The installer only works for **ARCH** Linux based distros that use systemd.
