@@ -13,7 +13,7 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    font:                        "JetBrainsMono Nerd Font Bold 9";
+    font:                        "Terminess Nerd Font Mono Bold 10";
     background:                  #1f2329;
     background-alt:              #1f2329E0;
     foreground:                  #b8bfe5;
@@ -51,10 +51,10 @@ mainbox {
 
 listbox {
     spacing:                     10px;
-    padding:                     10px 5px 10px 5px;
+    padding:                     15px 15px;
     background-color:            transparent;
     orientation:                 vertical;
-    children:                    [ "message", "listview" ];
+    children:                    [ "listview" ];
 }
 
 /*****----- Inputbar -----*****/
@@ -69,8 +69,9 @@ inputbar {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         "";
-    padding:                     12px 15px;
+    font:                        "JetBrainsMono Nerd Font Bold 9";
+    str:                         "";
+    padding:                     12px 19px 0 15px;
     border-radius:               8px;
     background-color:            @background-alt;
     text-color:                  inherit;
@@ -78,17 +79,13 @@ textbox-prompt-colon {
 entry {
     enabled:                     true;
     expand:                      true;
-    padding:                     12px 16px;
+    padding:                     12px 12px;
     border-radius:               8px;
     background-color:            @background-alt;
     text-color:                  inherit;
     cursor:                      text;
     placeholder:                 "Search";
     placeholder-color:           inherit;
-}
-dummy {
-    expand:                      true;
-    background-color:            transparent;
 }
 
 
