@@ -227,16 +227,16 @@ clear
 # Installing yay
 logo "Installing Yay"
 	if command -v yay >/dev/null 2>&1; then
-		printf "%s%sYay is already installed%s\n" "${BLD}" "${CGR}" "${CNC}"
+		printf "%s%sYay is already installed.%s" "${BLD}" "${CGR}" "${CNC}"
 	else
-		printf "%s%sInstalling yay%s\n" "${BLD}" "${CBL}" "${CNC}"
+		printf "%s%sInstalling Yay.%s" "${BLD}" "${CBL}" "${CNC}"
 		{
 			cd "$HOME" || exit
 			git clone https://aur.archlinux.org/yay.git
 			cd yay || exit
 			makepkg -si --noconfirm
 		} || {
-		printf "\n%s%sFailed to install Yay.%s\n" "${BLD}" "${CRE}" "${CNC}"
+		printf "\n%s%sFailed to install Yay.%s" "${BLD}" "${CRE}" "${CNC}"
 	}
 fi
 
@@ -246,9 +246,9 @@ clear
 # Intalling tdrop for scratchpads
 logo "Installing Tdrop"
 	if command -v tdrop >/dev/null 2>&1; then
-		printf "\n%s%sTdrop is already installed%s\n" "${BLD}" "${CGR}" "${CNC}"
+		printf "%s%sTdrop is already installed.%s" "${BLD}" "${CGR}" "${CNC}"
 	else
-		printf "\n%s%sInstalling tdrop%s\n" "${BLD}" "${CBL}" "${CNC}"
+		printf "%s%sInstalling Tdrop.%s" "${BLD}" "${CBL}" "${CNC}"
 		yay -S tdrop-git --noconfirm
 	fi
 
@@ -258,9 +258,9 @@ clear
 # Intalling xqp
 logo "Installing xqp"
 	if command -v xqp >/dev/null 2>&1; then
-		printf "\n%s%sxqp is already installed%s\n" "${BLD}" "${CGR}" "${CNC}"
+		printf "%s%sXqp is already installed.%s" "${BLD}" "${CGR}" "${CNC}"
 	else
-		printf "\n%s%sInstalling xqp%s\n" "${BLD}" "${CBL}" "${CNC}"
+		printf "%s%sInstalling xqp.%s" "${BLD}" "${CBL}" "${CNC}"
 		yay -S xqp --noconfirm
 	fi
 	
@@ -270,10 +270,10 @@ clear
 # Installing Brave
 logo "Installing Brave"
 	if command -v brave >/dev/null 2>&1; then
-        printf "\n%s%sBrave is already installed%s\n" "${BLD}" "${CGR}" "${CNC}"
-    else
-		printf "\n%s%sInstalling Brave%s\n" "${BLD}" "${CBL}" "${CNC}"
-        yay -S brave-bin --noconfirm
+        	printf "%s%sBrave is already installed.%s" "${BLD}" "${CGR}" "${CNC}"
+    	else
+		printf "%s%sInstalling Brave.%s" "${BLD}" "${CBL}" "${CNC}"
+        	yay -S brave-bin --noconfirm
 	fi
 
 sleep 1
