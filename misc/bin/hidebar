@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Originally created by	- https://github.com/gh0stzk
 
 function hide() {
 polybar-msg cmd hide | bspc config top_padding 2 | bspc config bottom_padding 2

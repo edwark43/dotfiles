@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Originally created by	- https://github.com/gh0stzk
 
 # Set the player
 [ -n "$(pgrep spotify)" ] && Control="spotify" || Control="MPD"

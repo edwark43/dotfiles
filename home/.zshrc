@@ -1,3 +1,5 @@
+# Originally created by	- https://github.com/gh0stzk
+
 #  Variables
 export VISUAL="${EDITOR}"
 export EDITOR='nvim'

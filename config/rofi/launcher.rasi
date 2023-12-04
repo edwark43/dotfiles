@@ -1,3 +1,6 @@
+// Originally created by	- https://github.com/gh0stzk
+
+//----- Main Configuration -----//
 configuration {
 	modi: 						"drun";
 	icon-theme: 				"Papirus-Dark";
@@ -11,7 +14,7 @@ configuration {
 	me-accept-entry:			"MousePrimary";
 }
 
-/*****----- Global Properties -----*****/
+//----- Global Properties -----//
 * {
     font:                        "Terminess Nerd Font Mono Bold 10";
     background:                  #1f2329;
@@ -20,7 +23,7 @@ configuration {
     selected:                    #3f5273;
 }
 
-/*****----- Main Window -----*****/
+//----- Main Window -----//
 window {
     /* properties for window widget */
     transparency:                "real";
@@ -40,7 +43,7 @@ window {
     background-color:            @background;
 }
 
-/*****----- Main Box -----*****/
+//----- Main Box -----//
 mainbox {
     enabled:                     true;
     spacing:                     0px;
@@ -57,7 +60,7 @@ listbox {
     children:                    [ "listview" ];
 }
 
-/*****----- Inputbar -----*****/
+//----- Inputbar -----//
 inputbar {
     enabled:                     true;
     spacing:                     10px;
@@ -90,7 +93,7 @@ entry {
 
 
 
-/*****----- Listview -----*****/
+//----- Listview -----//
 listview {
     enabled:                     true;
     columns:                     3;
@@ -109,7 +112,7 @@ listview {
     cursor:                      "default";
 }
 
-/*****----- Elements -----*****/
+//----- Elements -----//
 element {
     enabled:                     true;
     spacing:                     10px;
@@ -141,7 +144,7 @@ element-text {
     horizontal-align:            0.0;
 }
 
-/*****----- Message -----*****/
+//----- Message -----//
 message {
     background-color:            transparent;
 }

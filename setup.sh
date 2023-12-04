@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Originally created by	- https://github.com/gh0stzk
 
 CRE=$(tput setaf 1)
 CYE=$(tput setaf 3)

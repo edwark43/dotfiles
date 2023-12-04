@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Originally created by	- https://github.com/gh0stzk
+
 
 	case "$1" in
 		--menu)

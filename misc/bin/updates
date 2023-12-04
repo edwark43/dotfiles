@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Originally created by	- https://github.com/gh0stzk
+# Copyright 2023 gh0stzk
 
 get_total_updates() {
 local total_updates=$(($(checkupdates 2> /dev/null | wc -l || echo 0) + $(yay -Qua 2> /dev/null | wc -l || echo 0)))

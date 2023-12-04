@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Originally created by	- https://github.com/gh0stzk
 
 # Icons
 vol_dir="$HOME/.local/share/assets"

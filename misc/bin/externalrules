@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Originally created by	- https://github.com/gh0stzk
 
 wid=$1
 class=$2

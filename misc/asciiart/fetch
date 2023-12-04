@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# I don't remember if I made this script or not.
+
 #colors
 #bold="(tput bold)"
 magenta="\033[1;35m"

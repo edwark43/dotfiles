@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Originally created by	- https://github.com/gh0stzk
 
 timestamp=$(date +%d_%m_%Y-%I-%M-%S)
 dir="$(xdg-user-dir PICTURES)/screenshots"
