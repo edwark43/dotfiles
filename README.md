@@ -18,4 +18,4 @@ chmod +x setup.sh
 ./setup.sh
 ```
 ## Credits
-- [gh0stzk](https://github.com/gh0stzk) and [rxyhn](https://github.com/rxyhn/tokyo)
+- [gh0stzk](https://github.com/gh0stzk), [Narmis-E](https://github.com/Narmis-E/onedark-wallpapers), and [rxyhn](https://github.com/rxyhn/tokyo).
