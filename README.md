@@ -18,4 +18,4 @@ chmod +x setup.sh
 ./setup.sh
 ```
 ## Credits
-- [gh0stzk](https://github.com/gh0stzk)
+- [gh0stzk](https://github.com/gh0stzk) and [rxyhn](https://github.com/rxyhn/tokyo)
