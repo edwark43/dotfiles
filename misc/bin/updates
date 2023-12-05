@@ -30,7 +30,7 @@ fi
 }
 
 update_system() {
-	yay -Syu --nocombinedupgrade --noconfirm
+	yay -Syu --combinedupgrade=false --noconfirm
 	echo -e "\033[1m\033[32mFinished!\033[0m"
 }
 
