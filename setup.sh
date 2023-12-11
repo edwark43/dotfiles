@@ -52,13 +52,13 @@ clear
 
 logo "Installing needed packages.."
 
-dependencies=(alacritty base-devel brightnessctl bspwm dunst feh git jgmenu \
+dependencies=(alacritty base-devel brightnessctl bspwm dunst feh git imagemagick jgmenu \
               jq libnotify libwebp lsd maim mpc mpd ncmpcpp neofetch neovim \
               pacman-contrib pamixer papirus-icon-theme physlock picom playerctl \
-	      polkit-gnome polybar ranger rofi rustup sxhkd \
-	      ttf-inconsolata ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-joypixels \
+	       	  polkit-gnome polybar ranger rofi rustup sxhkd \
+	      	  ttf-inconsolata ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-joypixels \
               ttf-terminus-nerd ueberzug webp-pixbuf-loader xclip xdg-user-dirs xdo xdotool \
-	      xorg-xkill xorg-xprop xorg-xrandr xorg-xsetroot xorg-xwininfo \
+	      	  xorg-xdpyinfo xorg-xkill xorg-xprop xorg-xrandr xorg-xsetroot xorg-xwininfo \
        	      zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting)
 
 is_installed() {

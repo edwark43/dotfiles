@@ -49,7 +49,7 @@ ctrl + alt + {plus,minus,t}
 
 # Random wallpaper
 super + alt + w
-	feh -z --no-fehbg --bg-fill ~/pics/wallpapers/
+	wallselector
 
 # Screenshot Now
 Print
