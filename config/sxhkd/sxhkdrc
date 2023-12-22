@@ -53,19 +53,19 @@ super + alt + w
 
 # Screenshot Now
 Print
-	screenshoter --now
+	screenshotter --now
 
 # Screenshot Select
 ctrl + Print
-	screenshoter --sel
+	screenshotter --sel
 
 # Screenshot in 10s
 alt + Print
-	screenshoter --in10
+	screenshotter --in10
 
 # Screenshot active window
 shift + Print
-	screenshoter --active
+	screenshotter --active
 
 # Manage brightness
 XF86MonBrightness{Up,Down}
