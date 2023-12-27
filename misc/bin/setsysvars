@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-SFILE="$HOME/.local/bin/.sys"
-
 function get_values() {
 
 DEFNETWORK=$(ip route | grep '^default' | awk '{print $5}' | head -n1)
@@ -41,8 +39,5 @@ function set_values() {
 
 }
 
-if [[ ! -f "$SFILE" ]]; then
-	get_values
-	set_values
-	touch "$SFILE"
-fi
+get_values
+set_values
