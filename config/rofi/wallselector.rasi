@@ -4,7 +4,7 @@ configuration {
     modi:                        "drun";
     show-icons:                  true;
     drun-display-format:         "{name}";
-    font:                        "JetBrainsMono NF Bold 11";
+    font:                        "JetBrainsMono NF Bold 18";
 
     //hover-select:				 true;
 	//me-select-entry:			 "";
@@ -14,7 +14,7 @@ configuration {
 //----- Global Properties -----//
 
 * {
-main-bg: #1f2329E6;
+main-bg: #1f2329;
 main-fg: #b8bfe5;
 select-bg: #3f5273;
 select-fg: #1f2329;
@@ -25,15 +25,14 @@ select-fg: #1f2329;
 window {
     enabled:                     true;
     fullscreen:                  false;
-    width:                       100%;
+    width:                       99%;
     transparency:                "real";
     cursor:                      "default";
     spacing:                     0px;
     padding:                     0px;
-    border:                      0px;
-    border-radius:               0px;
-    border-color:                transparent;
-    background-color:            transparent;
+    border:                      2px;
+    border-color:                #465b80;
+    background-color:            @main-bg;
 }
 
 //----- Main Box -----//
