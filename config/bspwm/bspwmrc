@@ -59,7 +59,7 @@ processes=("polybar" "sxhkd" "dunst" "mpd")
 pidof -q picom || { picom --config "$HOME"/.config/picom/picom.conf & }
 
 # Set random wallpaper for actual rice
-feh -z --no-fehbg --bg-fill "$HOME"/pics/wallpapers
+feh -z --no-fehbg --bg-fill $(xdg-user-dir PICTURES)/wallpapers
 
 # Reload sxhkd daemon
 sxhkd -c "$HOME"/.config/sxhkd/sxhkdrc &

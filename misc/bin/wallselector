@@ -11,7 +11,7 @@ elif ! command -v convert > /dev/null 2>&1; then
 fi
 
 # Set some variables
-wall_dir="${HOME}/pics/wallpapers"
+wall_dir="$(xdg-user-dir PICTURES)wallpapers"
 cacheDir="${HOME}/.cache/wallselector"
 rofi_command="rofi -dmenu -theme ${HOME}/.config/rofi/wallselector.rasi -theme-str ${rofi_override}"
 

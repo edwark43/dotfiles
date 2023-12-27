@@ -55,7 +55,7 @@ logo "Installing needed packages.."
 dependencies=(alacritty base-devel brightnessctl bspwm dunst feh git imagemagick jgmenu \
               jq libnotify libwebp lsd maim mpc mpd ncmpcpp neofetch neovim \
               pacman-contrib pamixer papirus-icon-theme physlock picom playerctl \
-	       	  polkit-gnome polybar ranger rofi rustup sxhkd \
+	       	  polkit-gnome polybar ranger rofi sxhkd \
 	      	  ttf-inconsolata ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-joypixels \
               ttf-terminus-nerd ueberzug webp-pixbuf-loader xclip xdg-user-dirs xdo xdotool \
 	      	  xorg-xdpyinfo xorg-xkill xorg-xprop xorg-xrandr xorg-xsetroot xorg-xwininfo \
@@ -78,16 +78,6 @@ do
   fi
 done
 sleep 3
-clear
-
-########## ---------- Preparing Folders ---------- ##########
-
-# Checks if the file user-dirs.dirs does not exist in ~/.config
-	if [ ! -e "$HOME/.config/user-dirs.dirs" ]; then
-		xdg-user-dirs-update
-		echo "Creating xdg-user-dirs"
-	fi
-sleep 2 
 clear
 
 ########## ---------- Cloning the Rice! ---------- ##########
@@ -157,6 +147,14 @@ for files in ~/dotfiles/config/*; do
   fi
 done
 
+# Checks if the file user-dirs.dirs does not exist in ~/.config
+	if [ ! -e "$HOME/.config/user-dirs.dirs" ]; then
+		xdg-user-dirs-update
+		echo "Creating xdg-user-dirs"
+	fi
+sleep 2 
+clear
+
 for files in ~/dotfiles/misc/bin/*; do
   cp -R "${files}" ~/.local/bin/
   if [ $? -eq 0 ]; then
@@ -202,7 +200,7 @@ for files in ~/dotfiles/misc/assets/*; do
 done
 
 for files in ~/dotfiles/home/pics/*; do
-  cp -R "${files}" ~/pics/
+  cp -R "${files}" $(xdg-user-dir PICTURES)
   if [ $? -eq 0 ]; then
 	printf "%s%s%s file copied successfully!%s\n" "${BLD}" "${CGR}" "${files}" "${CNC}"
 	sleep 1
