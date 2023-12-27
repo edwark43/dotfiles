@@ -53,7 +53,7 @@ clear
 logo "Installing needed packages.."
 
 dependencies=(alacritty base-devel brightnessctl bspwm dunst feh git imagemagick jgmenu \
-              jq libnotify libwebp lsd maim mpc mpd ncmpcpp neofetch neovim \
+              libnotify libwebp lsd maim mpc mpd ncmpcpp neofetch neovim \
               pacman-contrib pamixer papirus-icon-theme physlock picom playerctl \
 	       	  polkit-gnome polybar ranger rofi sxhkd \
 	      	  ttf-inconsolata ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-joypixels \
