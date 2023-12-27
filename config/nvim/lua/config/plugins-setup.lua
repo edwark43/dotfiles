@@ -44,9 +44,6 @@ local ensure_packer = function()
   
   -- Colorizer
   use("norcalli/nvim-colorizer.lua")
-
-  -- Codeium
-  use("Exafunction/codeium.vim")
   
    if packer_bootstrap then
       require("packer").sync()
