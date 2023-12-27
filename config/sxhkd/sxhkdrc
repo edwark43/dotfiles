@@ -11,7 +11,7 @@ super + alt + Return
 	openapp --floating
 
 # Menu applications
-super + F1
+F1
 	openapp --menu
 
 #####
