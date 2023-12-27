@@ -47,7 +47,7 @@ super + {h,u}
 ctrl + alt + {plus,minus,t}
 	picom-trans {-c -o +3,-c -o -1,-c -d}
 
-# Random wallpaper
+# Show Wallpaper Selector
 super + alt + w
 	wallselector
 
