@@ -16,7 +16,7 @@ configuration {
 
 //----- Global Properties -----//
 * {
-    font:                        "Terminess Nerd Font Mono Bold 16";
+    font:                        "Terminess Nerd Font Mono Bold 10";
     background:                  #1f2329;
     background-alt:              #1f2329E0;
     foreground:                  #b8bfe5;
@@ -32,7 +32,7 @@ window {
     border:                      2px;
     border-color:                #465b80;
     fullscreen:                  false;
-    width:                       750px;
+    width:                       550px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -72,7 +72,7 @@ inputbar {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    font:                        "JetBrainsMono Nerd Font Bold 16";
+    font:                        "JetBrainsMono Nerd Font Bold 9";
     str:                         "";
     padding:                     12px 19px 0 15px;
     border-radius:               8px;
@@ -133,7 +133,7 @@ element selected.normal {
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
-    size:                        36px;
+    size:                        24px;
     cursor:                      inherit;
 }
 element-text {
