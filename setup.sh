@@ -11,21 +11,6 @@ CNC=$(tput sgr0)
 backup_folder=~/.ricebackup
 date=$(date +%Y%m%d-%H%M%S)
 
-logo () {
-	
-	local text="${1:?}"
-	echo -en " ____________
-< Arch Linux >
- ------------
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\*
-                ||----w |
-                ||     ||
-      edwark43 dotfiles\n\n"
-    printf ' %s [%s%s %s%s %s]%s\n\n' "${CRE}" "${CNC}" "${CYE}" "${text}" "${CNC}" "${CRE}" "${CNC}"
-}
-
 ########## ---------- You must not run this as root ---------- ##########
 
 if [ "$(id -u)" = 0 ]; then
@@ -35,7 +20,6 @@ fi
 
 ########## ---------- Welcome ---------- ##########
 
-logo "Welcome!"
 printf '%s%sThis script will check if you have the necessary dependencies, and if not, it will install them. Then, it will clone the RICE to your HOME directory.\nAfter that, it will create a local backup of your files, and then copy my dotfiles to your computer.\n\nMy dotfiles DO NOT modify any of your system configurations.\nYou will be prompted for your root password to install any missing dependencies and/or to switch to the zsh shell if it is not your default.\n\nThis script does not have the potential to break your system, it only copies files from my repository to your HOME directory.%s\n\n' "${BLD}" "${CRE}" "${CNC}"
 
 while true; do
@@ -50,7 +34,7 @@ clear
 
 ########## ---------- Install packages ---------- ##########
 
-logo "Installing needed packages.."
+printf '%s%sInstalling needed packages..%s\n\n' "${CNC}" "${CRE}" "${CNC}"
 
 dependencies=(alacritty base-devel brightnessctl bspwm dunst feh git imagemagick jgmenu \
               libnotify libwebp lsd maim mpc mpd ncmpcpp neofetch neovim \
@@ -82,7 +66,7 @@ clear
 
 ########## ---------- Cloning the Rice! ---------- ##########
 
-logo "Downloading dotfiles"
+printf '%s%sDownloading dotfiles.%s\n\n' "${CNC}" "${CRE}" "${CNC}"
 
 repo_url="https://github.com/edwark43/dotfiles"
 repo_dir="$HOME/dotfiles"
@@ -102,7 +86,7 @@ clear
 
 ########## ---------- Backup files ---------- ##########
 
-logo "Backup files"
+prinf '%s%sBackup files%s\n\n' "${CNC}" "${CRE}" "${CNC}"
 printf "Backup files will be stored in %s%s%s/.ricebackup%s \n\n" "${BLD}" "${CRE}" "$HOME" "${CNC}"
 sleep 10
 
@@ -127,7 +111,7 @@ clear
 
 ########## ---------- Copy the Rice! ---------- ##########
 
-logo "Installing dotfiles.."
+printf '%s%sInstalling dotfiles..%s\n\n' "${CNC}" "${CRE}" "${CNC}"
 printf "Copying files to respective directories..\n"
 
 [ ! -d ~/.config ] && mkdir -p ~/.config
@@ -219,12 +203,12 @@ clear
 
 ########## ---------- Installing Yay & other aur packages ---------- ##########
 
-logo "Installing Yay, Tdrop, xqp, and Brave."
+printf '%s%sInstalling Yay, Tdrop, xqp, and Brave.%s\n\n' "${CNC}" "${CRE}" "${CNC}"
 sleep 2
 clear
 
 # Installing yay
-logo "Installing Yay"
+printf '%s%sInstalling Yay%s\n\n' "${CNC}" "${CRE}" "${CNC}"
 	if command -v yay >/dev/null 2>&1; then
 		printf "%s%sYay is already installed.%s" "${BLD}" "${CGR}" "${CNC}"
 	else
@@ -243,7 +227,7 @@ sleep 1
 clear
 
 # Intalling tdrop for scratchpads
-logo "Installing Tdrop"
+printf '%s%sInstalling Tdrop%s\n\n' "${CNC}" "${CRE}" "${CNC}"
 	if command -v tdrop >/dev/null 2>&1; then
 		printf "%s%sTdrop is already installed.%s" "${BLD}" "${CGR}" "${CNC}"
 	else
@@ -255,7 +239,7 @@ sleep 1
 clear
 
 # Intalling xqp
-logo "Installing xqp"
+printf '%s%sInstalling xqp%s\n\n' "${CNC}" "${CRE}" "${CNC}"
 	if command -v xqp >/dev/null 2>&1; then
 		printf "%s%sXqp is already installed.%s" "${BLD}" "${CGR}" "${CNC}"
 	else
@@ -267,7 +251,7 @@ sleep 1
 clear
 
 # Installing Brave
-logo "Installing Brave"
+printf '%s%sInstalling Brave%s\n\n' "${CNC}" "${CRE}" "${CNC}"
 	if command -v brave >/dev/null 2>&1; then
         	printf "%s%sBrave is already installed.%s" "${BLD}" "${CGR}" "${CNC}"
     	else
@@ -280,7 +264,7 @@ clear
 
 ########## --------- Enabling MPD service --------- ##########
 
-logo "Enabling mpd service"
+printf '%s%sEnabling mpd service%s\n\n' "${CNC}" "${CRE}" "${CNC}"
 
 # Checking if the mpd service is enabled globally
 	if systemctl is-enabled --quiet mpd.service; then
@@ -296,13 +280,9 @@ printf "%s%sDone!!%s\n\n" "${BLD}" "${CGR}" "${CNC}"
 sleep 2
 clear
 
-########## --------- Updating user-dirs.dirs --------- ##########
-
-xdg-user-dirs-update
-
 ########## --------- Changing shell to zsh --------- ##########
 
-logo "Changing default shell to zsh"
+printf '%s%sChanging default shell to zsh%s\n\n' "${CNC}" "${CRE}" "${CNC}"
 
 	if [[ $SHELL != "/usr/bin/zsh" ]]; then
 		printf "\n%s%sChanging your shell to zsh. Your root password is needed.%s\n\n" "${BLD}" "${CYE}" "${CNC}"
