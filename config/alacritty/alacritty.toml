@@ -1,3 +1,5 @@
+import = ["~/.config/alacritty/onedark.toml", "~/.config/alacritty/font.toml"]
+
 live_config_reload = true
 
 [window]
@@ -10,45 +12,21 @@ dynamic_title = true
 history = 10000
 multiplier = 3
 
-[font]
-normal = { family = "JetBrainsMono NF"}
-bold = { family = "JetBrainsMono NF"}
-italic = { family = "JetBrainsMono NF"}
-bold_italic = { family = "JetBrainsMono NF"}
-size = 10
-
-[colors.primary]
-foreground = "#b8bfe5"
-background = "#1f2329"
-
-[colors.cursor]
-cursor = "#465b80"
-text = "#e5e5e5"
-
-[colors.normal]
-black = "#0f1319"
-red = "#644d66"
-green = "#375759"
-yellow = "#736871"
-blue = "#3f5273"
-magenta = "#543f66"
-cyan = "#324f66"
-white = "#b3b3b3"
-
-[colors.bright]
-black = "#b3b3b3"
-red = "#735771"
-green = "#3f6566"
-yellow = "#807476"
-blue = "#465b80"
-magenta = "#533969"
-cyan = "#385a73"
-white = "#e5e5e5"
+[bell]
+animation = "Linear"
+duration = 50
+color = "#3f6566"
+command = { program = "paplay", args = ["/usr/share/sounds/freedesktop/stereo/dialog-error.oga"] }
 
 [selection]
 save_to_clipboard = false
 
 [cursor]
-style = { Block, On }
-blink_interval = 550
+style = { Block, Off }
+vi_mode_style = { Block, On }
+blink_interval = 1000
+blink_timeout = 0
 unfocused_hollow = false
+
+[mouse]
+hide_when_typing = true
