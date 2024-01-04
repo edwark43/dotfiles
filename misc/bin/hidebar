@@ -1,22 +1,12 @@
 #!/usr/bin/env bash
-# Originally created by	- https://github.com/gh0stzk
-
-function hide() {
-polybar-msg cmd hide | bspc config top_padding 2 | bspc config bottom_padding 2
-}
-
-function unhide() {
-polybar-msg cmd show | bspc config top_padding 48 | bspc config bottom_padding 48
-}
-
 case $1 in
 	-h | --hide | hide)
-		hide
+		polybar-msg cmd hide | bspc config top_padding 2 | bspc config bottom_padding 2
 		exit;;
 	-u | --unhide | unhide)
-		unhide
+		polybar-msg cmd show | bspc config top_padding 48 | bspc config bottom_padding 48
 		exit;;
 	*)
-		echo "Error: Invalid option"
+		echo "Invalid option"
 		exit;;
 esac

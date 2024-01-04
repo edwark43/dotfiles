@@ -1,16 +1,11 @@
 #!/usr/bin/env bash
 # Originally created by	- https://github.com/rxyhn
 
-DIR="$HOME/.local/share/assets"
 BRIGHTNESS_STEPS=5
 
-function get_brightness {
-  brightnessctl i | grep -oP '\(\K[^%\)]+'
-}
-
 function send_notification {
-  icon="$DIR/brightness.svg"
-  brightness=$(get_brightness)
+  icon="$HOME/.local/share/assets/brightness.svg"
+  brightness=$(brightnessctl i | grep -oP '\(\K[^%\)]+')
   bar=$(seq -s "─" 0 $((brightness / 5)) | sed 's/[0-9]//g')
   dunstify "Brightness $brightness%" -i $icon -r 5555 -u normal -h int:value:$(($brightness))
 }
