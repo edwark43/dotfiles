@@ -1,39 +1,42 @@
 #!/usr/bin/env bash
 # Originally created by	- https://github.com/gh0stzk
 
+term="alacritty"
+lines="window.dimensions.lines"
+columns="window.dimensions.columns"
 
-	case "$1" in
-		--menu)
-			rofi -show drun -theme $HOME/.config/rofi/launcher.rasi
-			;; 
-		--terminal)
-			alacritty
-			;;
-		--floating)
-			alacritty --class floaterm,alacritty -o window.dimensions.lines=22 window.dimensions.columns=90
-			;;
-		--update)
-			alacritty --hold --class floaterm,alacritty -o window.dimensions.lines=22 window.dimensions.columns=90 -e updates --update-system
-			;;
-		--checkupdates)
-			alacritty --hold --class updating,alacritty -o window.dimensions.lines=22 window.dimensions.columns=47 -e updates --print-updates
-			;;
-		--ranger)
-			alacritty --class alacritty -e ranger
-			;;
-		--nvim)
-			alacritty -e nvim
-			;;
-		--music)
-			alacritty --class floaterm,alacritty -o window.dimensions.lines=18 window.dimensions.columns=67 -e ncmpcpp
-			;;
-		--fetch)
-			alacritty --hold --class floaterm,alacritty -o window.dimensions.lines=21 window.dimensions.columns=90 -e neofetch
-			;;
-		--browser)
-			brave
-			;;
-		*)
-			echo "Not a Valid Option"
-			;;
-	esac
+case "$1" in
+	--menu)
+		rofi -show drun -theme $HOME/.config/rofi/launcher.rasi
+		;; 
+	--terminal)
+		term
+		;;
+	--floating)
+		term --class floaterm,term -o lines=22 columns=90
+		;;
+	--update)
+		term --hold --class floaterm,term -o lines=22 columns=90 -e updates --update-system
+		;;
+	--checkupdates)
+		term --hold --class updating,term -o lines=22 columns=47 -e updates --print-updates
+		;;
+	--ranger)
+		term --class term -e ranger
+		;;
+	--nvim)
+		term -e nvim
+		;;
+	--music)
+		term --class floaterm,term -o lines=18 columns=67 -e ncmpcpp
+		;;
+	--fetch)
+		term --hold --class floaterm,term -o lines=21 columns=90 -e neofetch
+		;;
+	--browser)
+		brave
+		;;
+	*)
+		echo "Not a Valid Option"
+		;;
+esac
