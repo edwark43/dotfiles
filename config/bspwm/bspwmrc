@@ -44,7 +44,7 @@ bspc rule -a scratch sticky=on state=floating focus=on
 # Set system vars for polybar
 . setsysvars
 
-# Terminate already running polybar, sxhkd, dunst, and mpd instances
+# Terminate already running polybar, sxhkd, and dunst instances
 processes=("polybar" "sxhkd" "dunst")
 
 	for process in "${processes[@]}"; do

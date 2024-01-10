@@ -40,8 +40,8 @@ dependencies=(alacritty base-devel brightnessctl bspwm dunst feh git imagemagick
               libnotify libwebp lsd maim mpc mpd ncmpcpp neofetch neovim \
               pacman-contrib pamixer papirus-icon-theme physlock picom playerctl \
 	       	  polkit-gnome polybar ranger rofi sxhkd \
-	      	  ttf-inconsolata ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-joypixels \
-              ttf-terminus-nerd ueberzug webp-pixbuf-loader xclip xdg-user-dirs xdo xdotool \
+	      	  ttf-jetbrains-mono ttf-jetbrains-mono-nerd \
+              ueberzug webp-pixbuf-loader xclip xdg-user-dirs xdo xdotool \
 	      	  xorg-xdpyinfo xorg-xkill xorg-xprop xorg-xrandr xorg-xsetroot xorg-xwininfo \
        	      zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting)
 
@@ -218,6 +218,9 @@ printf '%s%sInstalling Yay%s\n\n' "${CNC}" "${CRE}" "${CNC}"
 			git clone https://aur.archlinux.org/yay.git
 			cd yay || exit
 			makepkg -si --noconfirm
+		} && {
+			cd "$HOME" || exit
+			rm -rf yay
 		} || {
 		printf "\n%s%sFailed to install Yay.%s" "${BLD}" "${CRE}" "${CNC}"
 	}
@@ -265,17 +268,7 @@ clear
 ########## --------- Enabling MPD service --------- ##########
 
 printf '%s%sEnabling mpd service%s\n\n' "${CNC}" "${CRE}" "${CNC}"
-
-# Checking if the mpd service is enabled globally
-	if systemctl is-enabled --quiet mpd.service; then
-		printf "\n%s%sDisabling and stopping the global mpd service%s\n" "${BLD}" "${CBL}" "${CNC}"
-		sudo systemctl stop mpd.service
-		sudo systemctl disable mpd.service
-	fi
-
-printf "\n%s%sEnabling and starting the user-level mpd service%s\n" "${BLD}" "${CYE}" "${CNC}"
-systemctl --user enable --now mpd.service
-
+systemctl enable --now mpd.service
 printf "%s%sDone!!%s\n\n" "${BLD}" "${CGR}" "${CNC}"
 sleep 2
 clear
