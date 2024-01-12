@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 
-local keymap = vim.keymap -- haz las cosas facil..
+local keymap = vim.keymap -- Do things easily..
 
 -- General Keymaps
 

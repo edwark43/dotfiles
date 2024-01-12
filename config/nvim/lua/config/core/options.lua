@@ -1,6 +1,6 @@
 local opt = vim.opt -- for conciseness
 
--- Numeracion de las lineas
+-- Number of Lines
 opt.relativenumber = true
 opt.number = true
 
@@ -20,7 +20,7 @@ opt.smartcase = true
 -- Cursor line
 opt.cursorline = true
 
--- appearance
+-- Appearance
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
@@ -31,7 +31,7 @@ opt.backspace = "indent,eol,start"
 -- Clipboard 
 opt.clipboard:append("unnamedplus")
 
--- Splitt Windows
+-- Split Windows
 opt.splitright = true
 opt.splitbelow = true
 
