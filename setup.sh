@@ -86,7 +86,7 @@ clear
 
 ########## ---------- Backup files ---------- ##########
 
-prinf '%s%sBackup files%s\n\n' "${CNC}" "${CRE}" "${CNC}"
+printf '%s%sBackup files%s\n\n' "${CNC}" "${CRE}" "${CNC}"
 printf "Backup files will be stored in %s%s%s/.ricebackup%s \n\n" "${BLD}" "${CRE}" "$HOME" "${CNC}"
 sleep 10
 
@@ -199,6 +199,13 @@ fc-cache -rv >/dev/null 2>&1
 printf "%s%sFile copied succesfully!!%s\n" "${BLD}" "${CGR}" "${CNC}"
 
 sleep 3
+clear
+
+########## ---------- Installing NvChad ---------- ##########
+
+printf '%s%sInstalling NvChad.%s\n\n' "${CNC}" "${CRE}" "${CNC}"
+git clone https://github.com/NvChad/NvChad "$HOME"/.config/nvim --depth 1
+sleep 2
 clear
 
 ########## ---------- Installing Yay & other aur packages ---------- ##########

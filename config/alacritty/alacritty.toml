@@ -22,8 +22,8 @@ command = { program = "paplay", args = ["/usr/share/sounds/freedesktop/stereo/di
 save_to_clipboard = false
 
 [cursor]
-style = { Block, Off }
-vi_mode_style = { Block, On }
+style = { shape = Block, blinking = Off }
+vi_mode_style = { shape = Block, blinking = On }
 blink_interval = 1000
 blink_timeout = 0
 unfocused_hollow = false

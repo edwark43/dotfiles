@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # Originally created by	- https://github.com/gh0stzk
 
-term="alacritty"
 lines="window.dimensions.lines"
 columns="window.dimensions.columns"
 
@@ -10,28 +9,28 @@ case "$1" in
 		rofi -show drun -theme $HOME/.config/rofi/launcher.rasi
 		;; 
 	--terminal)
-		term
+		alacritty
 		;;
 	--floating)
-		term --class floaterm,term -o lines=22 columns=90
+		alacritty --class floaterm,alacritty -o lines=22 columns=90
 		;;
 	--update)
-		term --hold --class floaterm,term -o lines=22 columns=90 -e updates --update-system
+		alacritty --hold --class floaterm,alacritty -o lines=22 columns=90 -e updates --update-system
 		;;
 	--checkupdates)
-		term --hold --class updating,term -o lines=22 columns=47 -e updates --print-updates
+		alacritty --hold --class updating,alacritty -o lines=22 columns=47 -e updates --print-updates
 		;;
 	--ranger)
-		term --class term -e ranger
+		alacritty --class alacritty -e ranger
 		;;
 	--nvim)
-		term -e nvim
+		alacritty -e nvim
 		;;
 	--music)
-		term --class floaterm,term -o lines=18 columns=67 -e ncmpcpp
+		alacritty --class floaterm,alacritty -o lines=18 columns=67 -e ncmpcpp
 		;;
 	--fetch)
-		term --hold --class floaterm,term -o lines=21 columns=90 -e neofetch
+		alacritty --hold --class floaterm,alacritty -o lines=21 columns=90 -e neofetch
 		;;
 	--browser)
 		brave
