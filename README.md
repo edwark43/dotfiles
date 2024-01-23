@@ -18,6 +18,7 @@ chmod +x setup.sh
 ./setup.sh
 ```
 ## Credits
-- [gh0stzk/dotfiles](https://github.com/gh0stzk/dotfiles) - The repo this was originally forked from. 
-- [Narmis-E/onedark-wallpapers](https://github.com/Narmis-E/onedark-wallpapers) - The repo the wallpapers came from.
-- [rxyhn/tokyo](https://github.com/rxyhn/tokyo) - The repo the brightness script came from.
+- [gh0stzk/dotfiles](https://github.com/gh0stzk/dotfiles) - Most of the scripts
+- [Narmis-E/onedark-wallpapers](https://github.com/Narmis-E/onedark-wallpapers) - Wallpapers
+- [rxyhn/tokyo](https://github.com/rxyhn/tokyo) - Brightness Script
+- [NvChad/NvChad](https://github.com/NvChad/NvChad) - NvChad
