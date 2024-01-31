@@ -119,6 +119,13 @@ printf "Copying files to respective directories..\n"
 [ ! -d ~/.local/share/fonts ] && mkdir -p ~/.local/share/fonts
 [ ! -d ~/.local/share/asciiart ] && mkdir -p ~/.local/share/asciiart
 [ ! -d ~/.local/share/assets ] && mkdir -p ~/.local/share/assets
+[ ! -d ~/desk ] && mkdir -p ~/desk
+[ ! -d ~/down ] && mkdir -p ~/down
+[ ! -d ~/docs ] && mkdir -p ~/docs
+[ ! -d ~/music ] && mkdir -p ~/music
+[ ! -d ~/pics ] && mkdir -p ~/pics
+[ ! -d ~/vids ] && mkdir -p ~/vids
+[ ! -d ~/games ] && mkdir -p ~/games
 
 for files in ~/dotfiles/config/*; do
   cp -R "${files}" ~/.config/
