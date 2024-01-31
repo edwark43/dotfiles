@@ -94,7 +94,7 @@ if [ ! -d "$backup_folder" ]; then
   mkdir -p "$backup_folder"
 fi
 
-for folder in alacritty bspwm dunst jgmenu mpd ncmpcpp nvim picom polybar ranger rofi sxhkd zsh; do
+for folder in alacritty bspwm dunst jgmenu mpd ncmpcpp picom polybar ranger rofi sxhkd zsh; do
   if [ -d "$HOME/.config/$folder" ]; then
     mv "$HOME/.config/$folder" "$backup_folder/${folder}_$date"
     echo "$folder folder backed up successfully at $backup_folder/${folder}_$date"
@@ -131,13 +131,9 @@ for files in ~/dotfiles/config/*; do
   fi
 done
 
-# Checks if the file user-dirs.dirs does not exist in ~/.config
-	if [ ! -e "$HOME/.config/user-dirs.dirs" ]; then
-		xdg-user-dirs-update
-		echo "Creating xdg-user-dirs"
-	fi
-sleep 2 
-clear
+xdg-user-dirs-update
+echo "Creating xdg-user-dirs"
+sleep 1
 
 for files in ~/dotfiles/misc/bin/*; do
   cp -R "${files}" ~/.local/bin/
@@ -199,13 +195,6 @@ fc-cache -rv >/dev/null 2>&1
 printf "%s%sFile copied succesfully!!%s\n" "${BLD}" "${CGR}" "${CNC}"
 
 sleep 3
-clear
-
-########## ---------- Installing NvChad ---------- ##########
-
-printf '%s%sInstalling NvChad.%s\n\n' "${CNC}" "${CRE}" "${CNC}"
-git clone https://github.com/NvChad/NvChad "$HOME"/.config/nvim --depth 1
-sleep 2
 clear
 
 ########## ---------- Installing Yay & other aur packages ---------- ##########
