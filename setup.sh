@@ -270,9 +270,14 @@ clear
 
 ########## --------- Enabling MPD service --------- ##########
 
-printf '%s%sEnabling mpd service%s\n\n' "${CNC}" "${CRE}" "${CNC}"
-systemctl enable --now mpd.service
-printf "%s%sDone!!%s\n\n" "${BLD}" "${CGR}" "${CNC}"
+if systemctl is-enabled --quiet mpd.service; then
+    printf "\n%s%sDisabling and stopping the global mpd service%s\n" "${BLD}" "${CBL}" "${CNC}"
+    sudo systemctl stop mpd.service
+    sudo systemctl disable mpd.service
+fi
+
+printf "\n%s%sEnabling and starting the user-level mpd service%s\n" "${BLD}" "${CYE}" "${CNC}"
+systemctl --user enable --now mpd.service
 sleep 2
 clear
 
