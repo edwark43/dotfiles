@@ -8,35 +8,35 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 #  Workspaces
 
-	# Default 1 monitor with 6 workspaces
-	for monitor in "$(xrandr -q | grep -w 'connected' | cut -d' ' -f1)"; do
-		bspc monitor "$monitor" -d '1' '2' '3' '4' '5' '6'
-	done
+# Default 1 monitor with 6 workspaces
+for monitor in $(xrandr -q | grep -w 'connected' | cut -d' ' -f1); do
+	bspc monitor "$monitor" -d '1' '2' '3' '4' '5' '6'
+done
 
 #  Bspwm Config
 
 bspc config external_rules_command "$HOME"/.local/bin/externalrules
-bspc config window_gap					-1
-bspc config split_ratio					0.51
-bspc config single_monocle				true
-bspc config borderless_monocle			false
-bspc config gapless_monocle				false
-bspc config focus_follows_pointer		true
-bspc config pointer_follows_focus		false
-bspc config pointer_motion_interval		5
-bspc config pointer_modifier			mod4
-bspc config pointer_action1				move
-bspc config pointer_action2				resize_side
-bspc config pointer_action3				resize_corner
-bspc config border_width 2
-bspc config top_padding 48
-bspc config bottom_padding 48
-bspc config left_padding 2
-bspc config right_padding 2
-bspc config normal_border_color "#252533"
-bspc config active_border_color "#252533"
-bspc config focused_border_color "#61C766"
-bspc config presel_feedback_color "#61C766"
+bspc config window_gap			-1
+bspc config split_ratio			0.51
+bspc config single_monocle		true
+bspc config borderless_monocle		false
+bspc config gapless_monocle		false
+bspc config focus_follows_pointer	true
+bspc config pointer_follows_focus	false
+bspc config pointer_motion_interval	5
+bspc config pointer_modifier		mod4
+bspc config pointer_action1		move
+bspc config pointer_action2		resize_side
+bspc config pointer_action3		resize_corner
+bspc config border_width		2
+bspc config top_padding 		48
+bspc config bottom_padding		48
+bspc config left_padding		2
+bspc config right_padding		2
+bspc config normal_border_color		"#252533"
+bspc config active_border_color		"#252533"
+bspc config focused_border_color	"#61C766"
+bspc config presel_feedback_color	"#61C766"
 bspc rule -a scratch sticky=on state=floating focus=on
 
 #  Autostart
@@ -47,11 +47,11 @@ bspc rule -a scratch sticky=on state=floating focus=on
 # Terminate already running polybar, sxhkd, and dunst instances
 processes=("polybar" "sxhkd" "dunst")
 
-	for process in "${processes[@]}"; do
-		if pgrep -f "$process"; then
-			pkill -9 -f "$process" > /dev/null; sleep 0.1
-		fi
-	done
+for process in "${processes[@]}"; do
+	if pgrep -f "$process"; then
+		pkill -9 -f "$process" > /dev/null; sleep 0.1
+	fi
+done
 
 # Load bspwm conf, colors, dunst, and bars
 . "$HOME"/.config/polybar/bar.sh
