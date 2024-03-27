@@ -89,8 +89,8 @@ alias mirrors="sudo reflector --verbose --latest 5 --country 'United States' --a
 
 alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias maintenance="yay -Sc && sudo pacman -Scc"
-alias purge="sudo pacman -Rns $(pacman -Qtdq) ; sudo fstrim -av"
-alias update="yay -Syu --nocombinedupgrade"
+alias trim="sudo fstrim -av"
+alias update="yay -Syu --combinedupgrade="false""
 
 alias vm-on="sudo systemctl start libvirtd.service"
 alias vm-off="sudo systemctl stop libvirtd.service"
