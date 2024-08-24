@@ -10,7 +10,7 @@ function _help() {
     printf "${fmt_help}" \
         "-h, --help, help" "Print this help." \
         "-r, --random, random" "Run a random color script." \
-        "-e, --exec, exec" "Run a specified color script by SCRIPT NAME or INDEX."\
+        "-e, --exec, exec" "Run a specified color script by SCRIPT NAME or INDEX."
 }
 
 function _random() {
