@@ -1,7 +1,3 @@
-import = ["~/.config/alacritty/onedark.toml", "~/.config/alacritty/font.toml"]
-
-live_config_reload = true
-
 [window]
 padding = { x = 15, y = 15 }
 decorations = "None"
@@ -30,3 +26,7 @@ unfocused_hollow = false
 
 [mouse]
 hide_when_typing = true
+
+[general]
+live_config_reload = true
+import = ["~/.config/alacritty/onedark.toml", "~/.config/alacritty/font.toml"]

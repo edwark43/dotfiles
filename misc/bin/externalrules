@@ -19,9 +19,12 @@ case "$class" in
 		outcome "state=floating sticky=on center=on"
 		;;
 	mpv)
-		outcome "state=pseudo_tiled focus=on rectangle=849x477+0+0 center=on"
+		outcome "state=floating focus=on rectangle=849x477+0+0 center=on"
 		;;
 	virt-manager)
 		outcome "state=floating center=on"
 		;;
+  ranger)
+    outcome "state=floating rectangle=900x700+0+0 center=on"
+    ;;
 esac

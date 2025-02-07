@@ -17,19 +17,14 @@ F1
 #####
 
 # Apps (browser, editor, filemanager, music, and updater)
-shift + alt + {b,v,f,k,u}
-	openapp {--browser,--nvim,--ranger, --music, --update}
-
+shift + alt + {b,v,f,k,u,t,m,n}
+	openapp {--browser,--nvim,--ranger, --music, --update, --terminal, --osmc, --nodeselector}
 
 #|||----- System Keybindings -----|||#
 
 # Show keybindings help
 alt + F1
 	keybindingshelp
-
-# jgmenu
-~button3
-  xqp 0 $(xdo id -N Bspwm -n root) && jgmenu --csv-file=~/.config/jgmenu/menu.csv --config-file=~/.config/jgmenu/jgmenurc
 
 # Scratchpad
 super + alt + o
@@ -40,7 +35,7 @@ ctrl + super + alt + {p,r,q,l,k}
 	{systemctl poweroff, systemctl reboot,bspc quit,physlock -d,xkill}
 
 # Hide/Show Bar
-super + {h,u}
+ctrl + shift + {h,u}
 	hidebar {-h,-u}
 
 # Change transparency on focused window
@@ -123,7 +118,7 @@ super + c
 	bspc node @/ --circulate {backward,forward}
 
 # Change focus of the Node or Swap Nodes
-super + {_,shift + }{Left,Down,Up,Right}
+super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # Switch workspace

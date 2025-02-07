@@ -21,7 +21,7 @@ case "$1" in
 		alacritty --hold --class updating,alacritty -o window.dimensions.lines=22 window.dimensions.columns=47 -e updates --print-updates
 		;;
 	--ranger)
-		alacritty --class alacritty -e ranger
+		alacritty --class ranger,alacritty -e ranger
 		;;
 	--nvim)
 		alacritty -e nvim
@@ -32,9 +32,15 @@ case "$1" in
 	--fetch)
 		alacritty --hold --class floaterm,alacritty -o window.dimensions.lines=21 window.dimensions.columns=90 -e neofetch
 		;;
-	--browser)
-		brave
+--nodeselector)
+		alacritty --class floaterm,alacritty -o window.dimensions.lines=21 window.dimensions.columns=90 -e nodeselector
 		;;
+	--browser)
+		cachy-browser
+		;;
+  --osmc)
+    prismlauncher -l b1.7.3
+    ;;
 	*)
 		echo "Not a Valid Option"
 		;;

@@ -15,6 +15,8 @@ visualizer_type = "spectrum"
 visualizer_look = ●●
 visualizer_color = "13"
 visualizer_spectrum_smooth_look = "yes"
+visualizer_autoscale = "yes"
+visualizer_spectrum_smooth_look_legacy_chars = "no"
 
 # GENERAL
 # ---

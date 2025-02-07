@@ -4,7 +4,7 @@ case $1 in
 		polybar-msg cmd hide | bspc config top_padding 2 | bspc config bottom_padding 2
 		exit;;
 	-u | --unhide | unhide)
-		polybar-msg cmd show | bspc config top_padding 48 | bspc config bottom_padding 48
+		polybar-msg cmd show | bspc config top_padding 76 | bspc config bottom_padding 76
 		exit;;
 	*)
 		echo "Invalid option"

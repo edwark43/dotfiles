@@ -1,11 +1,11 @@
 # Originally created by	- https://github.com/gh0stzk
 
 #  Variables
-export VISUAL="${EDITOR}"
+export VISUAL='nvim'
 export EDITOR='nvim'
 export TERMINAL='alacritty'
-export BROWSER='brave'
-export HISTORY_IGNORE="(ls|dir|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
+export BROWSER='librewolf'
+export HISTORY_IGNORE='(ls|dir|cd|pwd|exit|sudo reboot|history|cd -|cd ..)'
 
 if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
@@ -86,20 +86,39 @@ fi
 
 #  Alias
 alias mirrors="sudo reflector --verbose --latest 5 --country 'United States' --age 6 --sort rate --save /etc/pacman.d/mirrorlist"
-
 alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias maintenance="yay -Sc && sudo pacman -Scc"
 alias trim="sudo fstrim -av"
 alias update="yay -Syu --combinedupgrade="false""
-
 alias vm-on="sudo systemctl start libvirtd.service"
 alias vm-off="sudo systemctl stop libvirtd.service"
-
 alias music="ncmpcpp"
-
-alias ls='lsd -a --group-directories-first'
-alias dir='lsd -a --group-directories-first'
-alias ll='lsd -la --group-directories-first'
+alias ls='eza --icons=always --color=always --group-directories-first -a'
+alias dir='eza --icons=always --color=always --group-directories-first -a'
+alias ll='eza --icons=always --color=always --group-directories-first -la'
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+alias df='df -BG -xtmpfs -xdevtmpfs -xefivarfs'
+alias tldr='tldr -L en'
 
 #  Autostart
 $HOME/.local/bin/colorscript -r
+if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+  exec startx
+fi
+___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/usr/etc/profile.d/conda.sh" ]; then
+        . "/usr/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

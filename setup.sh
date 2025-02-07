@@ -37,9 +37,9 @@ clear
 printf '%s%sInstalling needed packages..%s\n\n' "${CNC}" "${CRE}" "${CNC}"
 
 dependencies=(alacritty base-devel brightnessctl bspwm dunst feh git imagemagick jgmenu \
-              libnotify libwebp lsd maim mpc mpd ncmpcpp neofetch neovim \
+              libnotify libwebp eza maim mpc mpd ncmpcpp neofetch neovim \
               pacman-contrib pamixer papirus-icon-theme physlock picom playerctl \
-	       	  polkit-gnome polybar ranger rofi sxhkd \
+	       	  polkit-gnome polybar ranger rofi sxhkd tealdear \
 	      	  ttf-jetbrains-mono ttf-jetbrains-mono-nerd \
               ueberzug webp-pixbuf-loader xclip xdg-user-dirs xdo xdotool \
 	      	  xorg-xdpyinfo xorg-xkill xorg-xprop xorg-xrandr xorg-xsetroot xorg-xwininfo \
@@ -257,12 +257,12 @@ sleep 1
 clear
 
 # Installing Brave
-printf '%s%sInstalling Brave%s\n\n' "${CNC}" "${CRE}" "${CNC}"
-	if command -v brave >/dev/null 2>&1; then
-        	printf "%s%sBrave is already installed.%s" "${BLD}" "${CGR}" "${CNC}"
+printf '%s%sInstalling Librewolf%s\n\n' "${CNC}" "${CRE}" "${CNC}"
+	if command -v librewolf >/dev/null 2>&1; then
+        	printf "%s%sLibrewolf is already installed.%s" "${BLD}" "${CGR}" "${CNC}"
     	else
-		printf "%s%sInstalling Brave.%s" "${BLD}" "${CBL}" "${CNC}"
-        	yay -S brave-bin --noconfirm
+		printf "%s%sInstalling Librewolf.%s" "${BLD}" "${CBL}" "${CNC}"
+        	yay -S librewolf-bin --noconfirm
 	fi
 
 sleep 1
