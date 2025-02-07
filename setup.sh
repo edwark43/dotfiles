@@ -206,7 +206,7 @@ clear
 
 ########## ---------- Installing Yay & other aur packages ---------- ##########
 
-printf '%s%sInstalling Yay, Tdrop, xqp, and Brave.%s\n\n' "${CNC}" "${CRE}" "${CNC}"
+printf '%s%sInstalling Yay, Tdrop, xqp, and Librewolf.%s\n\n' "${CNC}" "${CRE}" "${CNC}"
 sleep 2
 clear
 
